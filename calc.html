@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora sencilla</title>
+
+    <script>
+        function funcionMultiplicar() {
+            var num = document.getElementById("num_cal");
+
+            // console.log(num.value);
+            num.value = num.value * num.value;
+            // console.log(num.value);
+
+            // Imprimir el resultado
+            document.getElementById("resultado").innerHTML = num.value;
+            num.value = ""
+        }
+
+    </script>
+</head>
+<body>
+
+    <section>
+
+        <table>
+            <tr>
+                <td>Indroduce un número:&nbsp;</td>
+                <td><input type="text" id="num_cal" value="0"></td>
+            </tr>
+            <tr><p id="resultado"></p></tr>
+            <tr>
+                <td><button onclick="funcionMultiplicar()">Multiplicar</button></td>
+            </tr>
+        </table>
+
+    </section>
+    
+</body>
+</html>
